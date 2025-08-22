@@ -2,7 +2,6 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-    hei</>
+    <div className="container flex flex-col">Staylth</div>
   );
 }
