@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react"
+import { Github, Linkedin, Code } from 'lucide-react'
 import { ElementType } from "react"
 
 type NavItem = {
@@ -9,46 +9,46 @@ type NavItem = {
 
 const navigation: NavItem[] = [
   {
-    name: "GitHub",
-    href: "https://github.com/your-username",
-    Icon: Github,
+    name: 'GitHub',
+    href: 'https://github.com/Raghav-sm',
+    Icon: Github
   },
   {
-    name: "LinkedIn",
-    href: "https://linkedin.com/in/your-username",
-    Icon: Linkedin,
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/raghavendra-s-mashyal-b2ab28267',
+    Icon: Linkedin
   },
   {
-    name: "Twitter",
-    href: "https://twitter.com/your-username",
-    Icon: Twitter,
-  },
+    name: 'Leetcode',
+    href: 'https://twitter.com/your-username',
+    Icon: Code
+  }
 ]
 
 export default function Footer() {
   return (
-    <footer className="py-8 border-t">
-      <div className="max-w-6xl mx-auto flex flex-col items-center space-y-4">
-        {/* Socials */}
-        <div className="flex space-x-6">
-          {navigation.map((item) => (
+    <footer className='border-t py-8'>
+      <div className='mx-auto flex max-w-6xl flex-col items-center space-y-4 px-6'>
+        
+        <div className='flex space-x-6'>
+          {navigation.map(item => (
             <a
               key={item.name}
               href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-muted-foreground hover:text-primary transition-colors'
             >
-              <span className="sr-only">{item.name}</span>
-              <item.Icon aria-hidden="true" className="h-5 w-5" />
+              <span className='sr-only'>{item.name}</span>
+              <item.Icon aria-hidden='true' className='h-5 w-5' />
             </a>
           ))}
         </div>
 
-        {/* Copyright */}
-        <p className="text-xs text-muted-foreground">
+        <p className='text-muted-foreground text-xs'>
           © {new Date().getFullYear()} Raghav. All rights reserved.
         </p>
+        <p>Buy me a Masala Puri</p>
       </div>
     </footer>
   )

@@ -2,11 +2,9 @@
 
 import Link from 'next/link'
 import { ModeToggle } from '@/components/theme-toggle'
-//padipadileche https://www.youtube.com/watch?v=Jz4fvd7ftS0&ab_channel=LahariMusic%7CT-Series
-//https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley
 export default function Header() {
   return (
-    <header className='bg-background/70 sticky top-0 z-50 w-full border-b backdrop-blur-md'>
+    <header className='bg-background/70 sticky top-0 z-50 backdrop-blur-md'>
       <div className='mx-auto flex max-w-6xl items-center justify-between px-6 py-4'>
         <h1 className='flex items-center text-3xl font-bold tracking-tight'>
           Raghav
