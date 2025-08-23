@@ -23,7 +23,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Hamed - Software Developer',
+  title: 'Raghav Portfolio',
   description:
     'Personal website of Hamed, a software developer and content creator from Canada'
 }
@@ -47,7 +47,6 @@ export default function RootLayout({
           <div className='flex min-h-screen flex-col'>
             <Header />
             <main className='grow'>
-              {/* Fixed: Removed extra container to allow full width */}
               {children}
             </main>
             <Footer />

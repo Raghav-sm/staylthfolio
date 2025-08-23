@@ -11,8 +11,8 @@ export default function IntroSection() {
         </h1>
 
         <p className='text-base leading-relaxed text-gray-600'>
-          Welcome to my digital nook. I&#39;m a software developer who loves building
-          full-stack web applications with modern technologies like
+          Welcome to my digital nook. I&#39;m an aspiring software developer who loves
+          building full-stack web applications with modern technologies like
           <b> Next.js</b>, <b>React</b>, and <b>ExpressJS</b>.
         </p>
       </div>
@@ -24,7 +24,7 @@ export default function IntroSection() {
           width={160}
           height={160}
           priority
-          className='rounded-sm object-cover shadow-md'
+          className='rounded-full object-cover shadow-md'
         />
       </div>
     </section>

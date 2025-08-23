@@ -1,12 +1,13 @@
 // tailwind.config.ts
 import type { Config } from 'tailwindcss'
 
-const config: Config ={
+const config: Config = {
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}'
+    './src/**/*.{ts,tsx}',
+    './content/**/*.{md,mdx}'
   ],
   theme: {
     container: {
@@ -74,6 +75,27 @@ const config: Config ={
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            code: {
+              backgroundColor: 'var(--muted)',
+              padding: '0.25rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+              '&::before': {
+                content: 'none'
+              },
+              '&::after': {
+                content: 'none'
+              }
+            },
+            pre: {
+              backgroundColor: 'var(--muted)'
+            }
+          }
+        }
       }
     }
   },

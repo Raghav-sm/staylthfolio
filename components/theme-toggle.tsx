@@ -4,13 +4,15 @@ import * as React from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
+import soundManager from '@/lib/soundManager'
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme()
 
-  const toggleTheme = () => {
+  const toggleTheme = React.useCallback(() => {
+    soundManager.playClick()
     setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
+  }, [theme, setTheme])
 
   return (
     <div className='relative'>
@@ -25,7 +27,6 @@ export function ModeToggle() {
         <span className='sr-only'>Toggle theme</span>
       </Button>
 
-      
       <div className='pointer-events-none absolute inset-0 -m-1 rounded-full border-2 border-transparent transition-all duration-200 peer-hover:border-black dark:peer-hover:border-white' />
     </div>
   )

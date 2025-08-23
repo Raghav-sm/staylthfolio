@@ -6,6 +6,7 @@ import notFound from '@/app/not-found'
 import { formatDate } from '@/lib/utils'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
+
 export default async function Post({ params }: { params: { slug: string } }) {
   const { slug } = params
   const post = await getPostBySlug(slug)
@@ -29,21 +30,21 @@ export default async function Post({ params }: { params: { slug: string } }) {
         </Link>
 
         {image && (
-          <div className='relative mb-8 h-96 w-full overflow-hidden rounded-lg'>
-            <Image src={image} alt={title || ''} className='object-cover' fill priority />
+          <div className='relative mb-6 h-96 w-full overflow-hidden rounded-lg'>
+            <Image src={image} alt={title || ''} className='object-cover' fill />
           </div>
         )}
 
         <header className='mb-12'>
-          <h1 className='text-4xl font-bold tracking-tight'>{title}</h1>
+          <h1 className='text-3xl font-bold tracking-tight'>{title}</h1>
           <p className='text-muted-foreground mt-3 text-sm'>
             {author} / {publishedAt ? formatDate(publishedAt) : 'No date'}
           </p>
         </header>
 
-        <main className='prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-img:rounded-xl prose-blockquote:border-primary/30 mt-16 max-w-none'>
-          <MDXRemote source={content} />
-        </main>
+        <div className='prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-img:rounded-xl prose-blockquote:border-primary/30 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-muted mt-16 max-w-none'>
+          <MDXRemote source={content}/>
+        </div>
 
         <footer className='mt-16 border-t pt-8'>
           <Link
