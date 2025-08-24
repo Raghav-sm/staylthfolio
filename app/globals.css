@@ -111,8 +111,6 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -121,7 +119,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 
 /* Add these styles to your global.css */
 pre {
@@ -190,4 +187,9 @@ pre[class*="language-"] {
 .token.important,
 .token.variable {
   @apply text-orange-300;
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

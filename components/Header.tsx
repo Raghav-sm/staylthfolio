@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { ModeToggle } from '@/components/theme-toggle'
+import { AnimatedThemeToggler } from '@/components/magicui/animated-theme-toggler'
 import { useState, useEffect } from 'react'
 
 export default function Header() {
@@ -53,7 +54,7 @@ export default function Header() {
             className='hover:text-primary group relative text-sm font-medium transition-colors'
           >
             Posts
-            <span className='absolute bottom-[-4px] left-0 h-0.5 w-0 bg-purple-600 transition-all duration-300 ease-out group-hover:w-full'></span>
+            <span className='absolute -bottom-1 left-1/2 h-0.5 w-full origin-center -translate-x-1/2 scale-x-0 transform bg-purple-600 transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
           </Link>
 
           <Link
@@ -61,7 +62,7 @@ export default function Header() {
             className='hover:text-primary group relative text-sm font-medium transition-colors'
           >
             Projects
-            <span className='absolute bottom-[-4px] left-0 h-0.5 w-0 bg-purple-600 transition-all duration-300 ease-out group-hover:w-full'></span>
+            <span className='absolute -bottom-1 left-1/2 h-0.5 w-full origin-center -translate-x-1/2 scale-x-0 transform bg-purple-600 transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
           </Link>
 
           <Link
@@ -69,7 +70,7 @@ export default function Header() {
             className='hover:text-primary group relative text-sm font-medium transition-colors'
           >
             Contact
-            <span className='absolute bottom-[-4px] left-0 h-0.5 w-0 bg-purple-600 transition-all duration-300 ease-out group-hover:w-full'></span>
+            <span className='absolute -bottom-1 left-1/2 h-0.5 w-full origin-center -translate-x-1/2 scale-x-0 transform bg-purple-600 transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
           </Link>
         </nav>
 
