@@ -1,11 +1,10 @@
-import path from 'path'
-import fs from 'fs'
-import matter from 'gray-matter'
-import { metadata } from '@/app/layout'
+// lib/posts.ts
+import { JSX } from 'react'
+import WebsiteBuilder from '@/content/posts/WebsiteBuilder'
 
 export type Post = {
   metadata: PostMetadata
-  content: string
+  component: () => JSX.Element
 }
 
 export type PostMetadata = {
@@ -17,15 +16,24 @@ export type PostMetadata = {
   slug: string
 }
 
-const rootDirectory = path.join(process.cwd(), 'content', 'posts')
+const posts: Post[] = [
+  {
+    metadata: {
+      title: 'Introduction to Website Building',
+      summary: 'Learn how to build modern websites with Next.js',
+      image: 'https://images.pexels.com/photos/6407632/pexels-photo-6407632.jpeg',
+      author: 'Raghav SM',
+      publishedAt: '2024-05-13',
+      slug: 'WebsiteBuilder'
+    },
+    component: WebsiteBuilder
+  }
+]
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  try {
-    const filePath = path.join(rootDirectory, `${slug}.mdx`)
-    const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
-    const { data, content } = matter(fileContent)
-    return { metadata: { ...data, slug }, content }
-  } catch (error) {
-    return null
-  }
+  return posts.find(post => post.metadata.slug === slug) || null
+}
+
+export async function getAllPosts(): Promise<Post[]> {
+  return posts
 }
