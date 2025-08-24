@@ -17,3 +17,11 @@ export function formatDate(date: string) {
     return 'Invalid Date'
   }
 }
+export function isValidUrl(string: string) {
+  try {
+    new URL(string)
+    return true
+  } catch (_) {
+    return false
+  }
+}
