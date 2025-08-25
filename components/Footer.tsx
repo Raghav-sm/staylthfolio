@@ -1,5 +1,5 @@
 import { Github, Linkedin, Code } from 'lucide-react'
-import { ElementType } from "react"
+import { ElementType } from 'react'
 
 type NavItem = {
   name: string
@@ -29,7 +29,6 @@ export default function Footer() {
   return (
     <footer className='border-t py-8'>
       <div className='mx-auto flex max-w-6xl flex-col items-center space-y-4 px-6'>
-        
         <div className='flex space-x-6'>
           {navigation.map(item => (
             <a
@@ -48,7 +47,18 @@ export default function Footer() {
         <p className='text-muted-foreground text-xs'>
           © {new Date().getFullYear()} Raghav. All rights reserved.
         </p>
-        <p>Buy me a Masala Puri</p>
+
+        <p className='text-muted-foreground text-sm'>
+          Buy me a{' '}
+          <a
+            href='https://www.zomato.com/bangalore/ctr-shri-sagar-since-1920-malleshwaram-bangalore'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='hover:text-primary font-semibold transition-colors'
+          >
+            Benne Masala Dosay
+          </a>
+        </p>
       </div>
     </footer>
   )

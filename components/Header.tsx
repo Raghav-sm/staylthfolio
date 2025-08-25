@@ -12,7 +12,7 @@ export default function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setNameIndex(prev => (prev + 1) % names.length)
-    }, 1000) 
+    }, 6000) 
 
     return () => clearInterval(interval)
   }, [])
