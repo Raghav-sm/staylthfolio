@@ -31,8 +31,8 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
           <FiSearch className='text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2' />
           <Input
             type='text'
+            variant='search'
             placeholder='Search posts...'
-            className='border-border focus-visible:ring-primary h-9 w-full rounded-md border pr-3 pl-9 shadow-sm focus-visible:ring-1'
             value={query}
             onChange={e => setQuery(e.target.value)}
           />

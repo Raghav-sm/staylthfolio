@@ -7,6 +7,7 @@ export default function IntroSection() {
     <section className='mx-auto flex max-w-4xl flex-col items-start justify-between px-6 py-12 md:flex-row'>
       <div className='flex-1'>
         <h1 className='mb-4 text-4xl leading-tight font-extrabold'>
+          
           Hey,I&#39;m <span className='text-purple-500'>Raghav</span>.
           <span className='ml-2 text-sm font-light text-gray-500 dark:text-gray-400'>
             /rə.gəv/
@@ -15,9 +16,10 @@ export default function IntroSection() {
 
         <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300'>
           Welcome to my digital nook.I&#39;m an{' '}
-          <span className='underline decoration-black underline-offset-4 dark:decoration-white'>
+          
             aspiring software dev
-          </span>{' '}
+          {' '}
+          <span className='text-purple-500 hover:animate-pulse'>,</span>
           who loves building fullstack web applications with modern technologies like{' '}
           <Highlighter action='highlight' color='#8B5CF6'>
             <b>Next.js</b>

@@ -6,6 +6,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { ScrollProgress } from '@/components/ui/scroll-progress'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -35,20 +36,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body
-        className={`${ibmPlexMono.className} flex min-h-screen flex-col antialiased`}
-      >
+      <body className={`${ibmPlexMono.className} flex min-h-screen flex-col antialiased`}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange
         >
-          <div className='flex min-h-screen flex-col'>
+          <div className='relative z-10 flex min-h-screen flex-col'>
             <Header />
-            <main className='grow'>
-              {children}
-            </main>
+            <ScrollProgress />
+            <main className='grow'>{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

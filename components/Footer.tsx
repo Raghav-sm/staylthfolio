@@ -28,6 +28,7 @@ const navigation: NavItem[] = [
 export default function Footer() {
   return (
     <footer className='border-t py-8'>
+      
       <div className='mx-auto flex max-w-6xl flex-col items-center space-y-4 px-6'>
         <div className='flex space-x-6'>
           {navigation.map(item => (

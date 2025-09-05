@@ -51,7 +51,7 @@ export default function Header() {
         <nav className='flex flex-1 items-center justify-center space-x-6'>
           <Link
             href='/posts'
-            className='hover:text-primary group relative text-sm font-medium transition-colors'
+            className='hover:text-primary group relative text- font-medium transition-colors'
           >
             Posts
             <span className='absolute -bottom-1 left-1/2 h-0.5 w-full origin-center -translate-x-1/2 scale-x-0 transform bg-purple-600 transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
@@ -59,7 +59,7 @@ export default function Header() {
 
           <Link
             href='/projects'
-            className='hover:text-primary group relative text-sm font-medium transition-colors'
+            className='hover:text-primary group relative text- font-medium transition-colors'
           >
             Projects
             <span className='absolute -bottom-1 left-1/2 h-0.5 w-full origin-center -translate-x-1/2 scale-x-0 transform bg-purple-600 transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
@@ -67,7 +67,7 @@ export default function Header() {
 
           <Link
             href='/contact'
-            className='hover:text-primary group relative text-sm font-medium transition-colors'
+            className='hover:text-primary group relative text- font-medium transition-colors'
           >
             Contact
             <span className='absolute -bottom-1 left-1/2 h-0.5 w-full origin-center -translate-x-1/2 scale-x-0 transform bg-purple-600 transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
